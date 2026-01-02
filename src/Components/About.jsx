@@ -294,18 +294,18 @@ const About = () => {
   </p>
 </motion.div>
 
-      {/* 🔹 Floating Illustration */}
+      {/* 🔹 Floating Illustration
       <motion.img
-        src="src/assets/pngtree-person-holding-glowing-sphere-with-digital-icons-representing-data-security-and-image_17484318.webp"
+        src="src/assets/undraw_lightbulb-moment_16av.png"
         alt="Innovation"
-        className="mt-10 w-40 md:w-65 opacity-90 rounded-2xl"
+        className="mt-10   w-40  md:w-65 opacity-90 rounded-2xl"
         initial={{ x: -500, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{
           duration: 1.5,
           ease: "easeOut",
         }}
-      />
+      /> */}
     </div>
   );
 };

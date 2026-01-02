@@ -138,7 +138,7 @@ const Footer = () => {
         <div className="w-full lg:w-1/4 flex justify-center lg:justify-end gap-6 text-xl sm:text-2xl">
           
           <a
-            href="https://www.facebook.com/evolvesolution"
+            href="https://www.facebook.com/@evolve.solutions.2025"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-yellow-500 transition-transform hover:scale-110"
@@ -147,7 +147,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://www.instagram.com/evolvesolution"
+            href="https://www.instagram.com/evolve_solution"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-yellow-500 transition-transform hover:scale-110"

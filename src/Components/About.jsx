@@ -217,23 +217,30 @@ const About = () => {
         Evolve
       </motion.h1>
 
-      {/* 🔹 Moving Background Text */}
-      <div className="relative w-full overflow-hidden mt-6 h-12">
-        <motion.div
-          className="absolute top-0 left-0 w-full h-full bg-white flex items-center rounded-2xl"
-          initial={{ x: "-100%" }}
-          animate={{ x: "100%" }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        >
-          <p className="text-black text-xl font-bold whitespace-nowrap w-full text-center">
-            🚀 Innovate • Build • Evolve 🚀 Innovate • Build • Evolve 🚀 Innovate • Build • Evolve 🚀
-          </p>
-        </motion.div>
-      </div>
+<div className="w-full mt-4 sm:mt-6 px-3 sm:px-6">
+  <div className="bg-white rounded-2xl h-10 sm:h-12 md:h-14 flex items-center justify-center">
+    
+    {/* Mobile & Small screens (2 times) */}
+    <p className="
+      text-black font-bold text-sm sm:text-base md:hidden
+      text-center leading-tight
+    ">
+      🚀 Innovate • Build • Evolve 🚀 Innovate • Build • Evolve 🚀
+    </p>
+
+    {/* Desktop & Large screens (3 times) */}
+    <p className="
+      hidden md:block text-black font-bold
+      md:text-lg lg:text-xl
+      text-center whitespace-nowrap
+    ">
+      🚀 Innovate • Build • Evolve 🚀 Innovate • Build • Evolve 🚀 Innovate • Build • Evolve 🚀
+    </p>
+
+  </div>
+</div>
+
+
 
       {/* 🔹 About Content */}
       <motion.div
@@ -265,6 +272,27 @@ const About = () => {
           enterprise solution, EvolveSoluion is your trusted partner in innovation.
         </p>
       </motion.div>
+     {/* 🔹 Project Section */}
+<motion.div
+  className="mt-12 w-full max-w-3xl bg-white text-black rounded-2xl p-5 shadow-lg border border-purple-200"
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <div className="flex items-center justify-between">
+    <h3 className="text-xl font-bold text-purple-700">
+      Project 1: Dating App
+    </h3>
+    <span className="px-3 py-1 text-sm font-semibold rounded-full bg-purple-100 text-purple-700">
+      Ongoing
+    </span>
+  </div>
+
+  <p className="mt-3 text-gray-700 text-sm">
+    A modern dating & friendship app with chat, audio/video calls and
+    location-based user discovery.
+  </p>
+</motion.div>
 
       {/* 🔹 Floating Illustration */}
       <motion.img

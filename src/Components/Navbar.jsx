@@ -103,7 +103,7 @@
 
 
 import React, { useState } from "react";
-import logo from "../assets/ChatGPT Image Dec 22, 2025, 04_46_12 PM.png"; // 🟡 make sure this path is correct
+import logo from "../assets/Evolvelogo.png"; // 🟡 make sure this path is correct
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

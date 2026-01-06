@@ -88,7 +88,7 @@
 
 import React from "react";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import logo from "../assets/ChatGPT Image Dec 22, 2025, 04_46_12 PM.png"; 
+import logo from "../assets/Evolvelogo.png"; 
 
 const Footer = () => {
   return (

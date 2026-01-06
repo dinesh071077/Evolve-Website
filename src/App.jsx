@@ -51,7 +51,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Project />} />
-        {/* <Route path="/about" element={<About />} /> */}
+      
       </Routes>
 
       <Footer />

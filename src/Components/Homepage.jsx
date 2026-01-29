@@ -221,7 +221,7 @@ confidence in rapidly evolving digital environments.
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Image */}
           <img
-            src="src/assets/modern-office.avif"
+            src="./src/assets/modern-office.avif"
             alt="Engineering Culture"
             className="rounded-2xl shadow-lg"
           />
@@ -259,7 +259,7 @@ confidence in rapidly evolving digital environments.
 
           {/* Image */}
           <img
-            src="src/assets/collaboration-group-young-modern-people-smart-casual-wear-discussing-something-smiling-working-creative-office-144907464.webp"
+            src="./src/assets/collaboration-group-young-modern-people-smart-casual-wear-discussing-something-smiling-working-creative-office-144907464.webp"
             alt="Team Collaboration"
             className="rounded-2xl shadow-lg"
           />
@@ -309,7 +309,7 @@ confidence in rapidly evolving digital environments.
     
     {/* Image */}
     <motion.img
-      src="src/assets/digi.jpeg"  // replace with real image
+      src="./src/assets/digi.jpeg"  // replace with real image
       alt="Digital Marketing Strategy"
       className="rounded-2xl shadow-xl"
       initial={{ opacity: 0, x: -60 }}

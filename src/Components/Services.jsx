@@ -209,7 +209,7 @@ const Services = () => {
   return (
     <div
       id="Services"
-      className="relative w-full min-h-screen overflow-hidden bg-white text-black"
+      className="relative w-full min-h-screen overflow-hidden bg-fuchsia-600 text-black"
       onClick={handleClick}
     >
       <Navbar />
@@ -265,7 +265,7 @@ const Services = () => {
         >
           Our{" "}
           <motion.span
-            className="text-fuchsia-500 inline-block"
+            className="text-white inline-block"
             animate={{
               scale: [1, 1.2, 1],
               textShadow: [

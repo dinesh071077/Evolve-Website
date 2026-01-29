@@ -147,7 +147,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="min-h-screen bg-linear-to-br from-blue-600 via-purple-700 to-indigo-800 text-white flex flex-col justify-center items-center px-6 py-20 relative overflow-hidden"
+      className="min-h-screen bg-linear-to-br bg-fuchsia-600 text-white flex flex-col justify-center items-center px-6 py-20 relative overflow-hidden"
       onClick={handleClick}
     >
       {/* 🔹 Tech Rain Animation */}

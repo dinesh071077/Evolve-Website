@@ -125,6 +125,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
+import pic1 from "../assets/modern-office.avif"
+import pic2 from "../assets/collaboration-group-young-modern-people-smart-casual-wear-discussing-something-smiling-working-creative-office-144907464.webp"
+import pic3 from "../assets/digi.jpeg"
 import {
   FaReact,
   FaNodeJs,
@@ -221,7 +224,7 @@ confidence in rapidly evolving digital environments.
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Image */}
           <img
-            src="./src/assets/modern-office.avif"
+            src={pic1}
             alt="Engineering Culture"
             className="rounded-2xl shadow-lg"
           />
@@ -259,7 +262,7 @@ confidence in rapidly evolving digital environments.
 
           {/* Image */}
           <img
-            src="./src/assets/collaboration-group-young-modern-people-smart-casual-wear-discussing-something-smiling-working-creative-office-144907464.webp"
+            src={pic2}
             alt="Team Collaboration"
             className="rounded-2xl shadow-lg"
           />
@@ -309,7 +312,7 @@ confidence in rapidly evolving digital environments.
     
     {/* Image */}
     <motion.img
-      src="./src/assets/digi.jpeg"  // replace with real image
+      src={pic3}
       alt="Digital Marketing Strategy"
       className="rounded-2xl shadow-xl"
       initial={{ opacity: 0, x: -60 }}

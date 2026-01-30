@@ -144,28 +144,40 @@ const Footer = () => {
         </div>
 
         {/* 🔹 Location Section */}
-        <div className="w-full lg:w-1/4 text-center lg:text-left">
-          <h3 className="text-lg font-semibold mb-2 flex items-center justify-center lg:justify-start gap-2">
-            <FaMapMarkerAlt className="text-fuchsia-600" />
-            Our Location
-          </h3>
+{/* 🔹 Location Section */}
+<div className="w-full lg:w-1/4 flex flex-col items-center lg:items-start text-center lg:text-left">
+  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+    <FaMapMarkerAlt className="text-fuchsia-600" />
+    Our Location
+  </h3>
 
-          <p className="text-gray-600 text-sm leading-relaxed mb-3">
-            Evolve Solution <br />
-            Np 28 Sai Supreme, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Ekkatuthangal,<br />
-            Chennai, Tamil Nadu – 600006
-          </p>
+  <p className="text-gray-600 text-sm leading-relaxed mb-4 max-w-xs">
+    <span className="font-semibold text-black">Evolve Solution</span>
+    <br />
+    NP 28, Sai Supreme,
+    <br />
+    Thiru Vi Ka Industrial Estate,
+    <br />
+    SIDCO Industrial Estate,
+    <br />
+    Ekkatuthangal,
+    <br />
+    Chennai, Tamil Nadu – 600006
+  </p>
 
-          {/* <div className="w-full h-32 rounded-xl overflow-hidden border border-gray-300">
-            <iframe
-              title="EvolveSolution Location"
-              src="https://www.google.com/maps?q=Np%2028,%20Thiru%20Vi%20Ka%20Industrial%20Estate,
-              %20SIDCO%20Industrial%20Estate,%20Ekkatuthangal,%20Chennai&output=embed"
-              className="w-full h-full"
-              loading="lazy"
-            />
-          </div> */}
-        </div>
+  {/* Map */}
+  <div className="w-full max-w-xs h-36 rounded-xl overflow-hidden border border-gray-300 shadow-sm">
+    <iframe
+      title="Evolve Solution Location"
+      src="https://www.google.com/maps?q=Np%2028,%20Thiru%20Vi%20Ka%20Industrial%20Estate,
+       %20SIDCO%20Industrial%20Estate,%20Ekkatuthangal,%20Chennai&output=embed"
+      className="w-full h-full"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    />
+  </div>
+</div>
+
 
         {/* 🔹 Right Section - Social Links */}
         <div className="w-full lg:w-1/4 flex justify-center lg:justify-end gap-6 text-xl sm:text-2xl">

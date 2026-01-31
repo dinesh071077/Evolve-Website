@@ -122,8 +122,11 @@
   //     </div>
   //   );
   // };
+  
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+
+import TypingText from "../Components/TypingAnimation";
 import Navbar from "./Navbar";
 import pic1 from "../assets/modern-office.avif"
 import pic2 from "../assets/collaboration-group-young-modern-people-smart-casual-wear-discussing-something-smiling-working-creative-office-144907464.webp"
@@ -151,6 +154,26 @@ const Homepage = () => {
     }, 1000);
   };
 
+  const imageFloat = {
+  animate: {
+    y: [0, -10, 0],
+  },
+  transition: {
+    duration: 3,
+    
+    ease: "easeInOut",
+  },
+};
+
+
+
+const descriptionText = `
+Evolve Solution is a technology-driven company specializing in web and mobile application development, digital marketing, IT consulting, and professional training services. We engineer scalable digital platforms, cloud-ready systems, and high-performance applications using modern frameworks, microservice architectures, and agile methodologies.
+
+Our solutions emphasize clean code, optimized performance, secure integrations, and seamless user experiences, helping businesses adapt, scale, and innovate in rapidly evolving digital environments.
+
+In addition to development services, Evolve Solution provides industry-focused technical courses, IT training, and placement support programs to prepare students and professionals with real-world skills and career opportunities. Our IT consulting and services help organizations streamline processes, enhance digital presence, and achieve sustainable growth.
+`;
   return (
     <div
       id="home"
@@ -192,160 +215,219 @@ const Homepage = () => {
       })}
 
       {/* ================= HERO ================= */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <motion.h1
-          className="text-6xl font-extrabold"
-          initial={{ opacity: 0, y: -80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          Welcome to{" "}
-          <span className="text-fuchsia-600">EvolveSolution</span>
-        </motion.h1>
+ <section className="min-h-screen pt-20 flex flex-col justify-center items-center text-center px-4 sm:px-6">
+  
+  <motion.h1
+    className="
+      font-extrabold 
+      text-3xl sm:text-4xl md:text-6xl 
+      leading-tight
+    "
+    initial={{ opacity: 0, y: -60 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.2 }}
+  >
+    Welcome to{" "}
+    <span className="text-fuchsia-600 block sm:inline">
+      EvolveSolution
+    </span>
+  </motion.h1>
 
-        <motion.p
-          className="mt-6 max-w-3xl text-lg font-semibold"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
-         We engineer scalable digital platforms, cloud-ready systems, and
-performance-driven applications using modern frameworks, microservice
-architectures, and agile methodologies. Our solutions emphasize clean
-code, optimized performance, secure integrations, and seamless user
-experiences, enabling businesses to adapt, scale, and innovate with
-confidence in rapidly evolving digital environments.
+  <motion.p
+    className="
+      mt-4 sm:mt-6 
+      max-w-3xl 
+      text-sm sm:text-base md:text-lg 
+      font-medium 
+      whitespace-pre-line
+    "
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.8 }}
+  >
+    <TypingText text={descriptionText} speed={20} />
+  </motion.p>
 
-        </motion.p>
-      </section>
+</section>
 
-      {/* ================= WORK CULTURE ================= */}
-      <section className="bg-fuchsia-600 py-12 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* Image */}
-          <img
-            src={pic1}
-            alt="Engineering Culture"
-            className="rounded-2xl shadow-lg"
-          />
 
-          {/* Content */}
-          <div>
-            <h2 className="text-3xl font-bold mb-4">
-              Engineering-Driven <span className="text-white">Culture</span>
-            </h2>
-            <p className="text-white leading-relaxed">
-              At EvolveSolution, we foster a high-performance engineering culture
-              built on clean architecture, reusable components,
-              and Agile sprint execution. Our teams collaborate across design,
-              development, and  ship production-ready solutions faster.
-            </p>
-          </div>
-        </div>
-      </section>
+  
 
-      {/* ================= COLLABORATION ================= */}
-      <section className="bg-fuchsia-600 py-14 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* Content */}
-          <div>
-            <h2 className="text-3xl font-bold mb-4">
-              Smart Collaboration & <span className="text-white">Growth</span>
-            </h2>
-            <p className="text-white leading-relaxed">
-              We believe in continuous improvement through code reviews,
-              architectural discussions, performance optimization, and
-              real-world problem solving. Our environment encourages innovation,
-              learning, and ownership at every level.
-            </p>
-          </div>
+{/* ================= WORK CULTURE ================= */}
+<section className="bg-fuchsia-600 py-10 sm:py-12 px-4 sm:px-6">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
 
-          {/* Image */}
-          <img
-            src={pic2}
-            alt="Team Collaboration"
-            className="rounded-2xl shadow-lg"
-          />
-        </div>
-      </section>
+    {/* Image */}
+    <motion.img
+      src={pic1}
+      alt="Engineering Culture"
+      className="w-full rounded-2xl shadow-2xl hover:shadow-fuchsia-300/40 transition-shadow duration-500"
+      initial={{ opacity: 0, x: -60, scale: 0.95 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      whileHover={{ scale: 1.04 }}
+    />
+
+    {/* Content */}
+    <div className="text-center md:text-left">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+        Engineering-Driven <span className="text-white">Culture</span>
+      </h2>
+
+      <p className="text-white text-sm sm:text-base leading-relaxed mb-4">
+        At EvolveSolution, we foster a high-performance engineering culture built
+        on clean architecture, reusable components, and Agile sprint execution.
+        Our teams work with clarity, ownership, and accountability to deliver
+        scalable digital solutions.
+      </p>
+
+      <ul className="text-white text-sm sm:text-base space-y-2 list-disc list-inside">
+        <li>Clean code standards and best practices</li>
+        <li>Agile development and sprint-based delivery</li>
+        <li>Code reviews and performance optimization</li>
+        <li>Scalable and maintainable system design</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+{/* ================= COLLABORATION ================= */}
+<section className="bg-fuchsia-600 py-12 sm:py-14 px-4 sm:px-6">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+
+    {/* Content */}
+    <div className="text-center md:text-left order-2 md:order-1">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+        Smart Collaboration & <span className="text-white">Growth</span>
+      </h2>
+
+      <p className="text-white text-sm sm:text-base leading-relaxed mb-4">
+        We believe that great products are built through strong collaboration.
+        Our teams communicate openly across design, development, and deployment
+        to solve real-world problems efficiently.
+      </p>
+
+      <ul className="text-white text-sm sm:text-base space-y-2 list-disc list-inside">
+        <li>Cross-functional team collaboration</li>
+        <li>Continuous learning and mentoring culture</li>
+        <li>Innovation-driven problem solving</li>
+        <li>Ownership and accountability at every level</li>
+      </ul>
+    </div>
+
+    {/* Image */}
+    <motion.img
+      src={pic2}
+      alt="Team Collaboration"
+      className="w-full rounded-2xl shadow-2xl hover:shadow-fuchsia-300/40 transition-shadow duration-500 order-1 md:order-2"
+      initial={{ opacity: 0, x: 60, scale: 0.95 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      whileHover={{ scale: 1.04 }}
+    />
+
+  </div>
+</section>
+
 
       {/* ================= SERVICES ================= */}
-      <section className="bg-gray-100 py-16 px-6 text-center">
-        <h2 className="text-4xl font-bold mb-12">
-          Our <span className="text-fuchsia-600">Core Services</span>
-        </h2>
+   <section className="bg-gray-100 py-12 sm:py-16 px-4 sm:px-6 text-center">
+  
+  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12">
+    Our <span className="text-fuchsia-600">Core Services</span>
+  </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="p-6 rounded-2xl shadow-md bg-white">
-            <FaLaptopCode className="text-4xl text-fuchsia-600 mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-2">Web Engineering</h3>
-            <p>
-              React, Next.js, Tailwind, REST & GraphQL APIs with scalable
-              architectures.
-            </p>
-          </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+    
+    {/* Web Development */}
+    <div className="p-5 sm:p-6 rounded-2xl shadow-md bg-white hover:shadow-xl transition-shadow duration-300">
+      <FaLaptopCode className="text-3xl sm:text-4xl text-fuchsia-600 mx-auto mb-3 sm:mb-4" />
+      <h3 className="text-lg sm:text-xl font-bold mb-2">
+        Web Development
+      </h3>
+      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+        We design and develop modern, responsive, and high-performance websites
+        tailored to your business needs. Our websites are fast, secure, and
+        user-friendly, ensuring a great experience across all devices.
+      </p>
+    </div>
 
-          <div className="p-6 rounded-2xl shadow-md bg-white">
-            <FaMobileAlt className="text-4xl text-fuchsia-600 mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-2">Mobile Applications</h3>
-            <p>
-              Cross-platform mobile apps using React Native with secure backend
-              integrations.
-            </p>
-          </div>
+    {/* Mobile Applications */}
+    <div className="p-5 sm:p-6 rounded-2xl shadow-md bg-white hover:shadow-xl transition-shadow duration-300">
+      <FaMobileAlt className="text-3xl sm:text-4xl text-fuchsia-600 mx-auto mb-3 sm:mb-4" />
+      <h3 className="text-lg sm:text-xl font-bold mb-2">
+        Mobile Applications
+      </h3>
+      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+        We design and develop high-quality mobile applications that deliver
+        smooth performance and an excellent user experience. Our apps are built
+        to be secure, scalable, and easy to use, helping businesses connect with
+        customers anytime, anywhere.
+      </p>
+    </div>
 
-          <div className="p-6 rounded-2xl shadow-md bg-white">
-            <FaDatabase className="text-4xl text-fuchsia-600 mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-2">Backend & Cloud</h3>
-            <p>
-              Node.js, Django, cloud deployment, authentication, and database
-              optimization.
-            </p>
-          </div>
-        </div>
-      </section>
+    {/* Backend & Cloud */}
+    <div className="p-5 sm:p-6 rounded-2xl shadow-md bg-white hover:shadow-xl transition-shadow duration-300">
+      <FaDatabase className="text-3xl sm:text-4xl text-fuchsia-600 mx-auto mb-3 sm:mb-4" />
+      <h3 className="text-lg sm:text-xl font-bold mb-2">
+        Backend & Cloud
+      </h3>
+      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+        We provide robust backend and cloud solutions that power secure,
+        scalable, and high-performance applications. Our backend systems handle
+        business logic, databases, and APIs, while our cloud services ensure
+        reliability, flexibility, and easy scalability.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       {/* ================= DIGITAL MARKETING ================= */}
     {/* ================= DIGITAL MARKETING ================= */}
-<section className="bg-gray-100 py-16 px-6">
-  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    
+<section className="bg-gray-100 py-10 sm:py-14 md:py-16 px-4 sm:px-6">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+
     {/* Image */}
     <motion.img
       src={pic3}
       alt="Digital Marketing Strategy"
-      className="rounded-2xl shadow-xl"
-      initial={{ opacity: 0, x: -60 }}
+      className="w-full rounded-2xl shadow-xl"
+      initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     />
 
     {/* Content */}
     <motion.div
-      initial={{ opacity: 0, x: 60 }}
+      className="text-center md:text-left"
+      initial={{ opacity: 0, x: 50 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <h2 className="text-4xl font-bold mb-6">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
         Land & Digital <span className="text-fuchsia-600">Marketing</span>
       </h2>
 
-      <p className="text-gray-700 text-lg leading-relaxed mb-4">
+      <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
         We provide end-to-end land and digital marketing solutions designed
-        to increase visibility, generate qualified leads, and drive
-        measurable business growth. Our strategies are data-driven,
-        audience-focused, and performance-oriented.
+        to increase visibility, generate qualified leads, and drive measurable
+        business growth. Our strategies are data-driven, audience-focused,
+        and performance-oriented.
       </p>
 
-      <p className="text-gray-700 text-lg leading-relaxed mb-6">
-        From local land promotions to full-scale digital campaigns, we
-        combine market research, creative execution, and analytics to
-        ensure maximum ROI across every channel.
+      <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-5 sm:mb-6">
+        From local land promotions to full-scale digital campaigns, we combine
+        market research, creative execution, and analytics to ensure maximum
+        ROI across every channel.
       </p>
 
-      <ul className="space-y-3 text-gray-800 font-medium">
+      <ul className="space-y-2 sm:space-y-3 text-gray-800 text-sm sm:text-base font-medium">
         <li>✔ SEO & Local Search Optimization</li>
         <li>✔ Social Media Marketing & Paid Ads</li>
         <li>✔ Google Ads, Meta Ads & Campaign Tracking</li>
@@ -356,6 +438,7 @@ confidence in rapidly evolving digital environments.
 
   </div>
 </section>
+
 
     </div>
   );

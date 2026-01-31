@@ -190,6 +190,12 @@ import {
   FaPython,
   FaDatabase,
 } from "react-icons/fa";
+import achi1 from "../assets/achi1.jpeg"
+import achi2 from "../assets/achi2.jpeg";
+import achi3 from "../assets/achi3.jpeg";
+import achi4 from "../assets/achi4.jpeg";
+import achi5 from "../assets/achi5..jpeg";
+import achi6 from "../assets/achi6.jpeg";
 
 const techIcons = [FaReact, FaNodeJs, FaPython, FaDatabase];
 
@@ -244,12 +250,13 @@ const Services = () => {
   ];
 
   const achievementImages = [
-    "./src/assets/achi1.jpeg",
-    "./src/assets/achi2.jpeg",
-    "./src/assets/achi3.jpeg",
-    "./src/assets/achi4.jpeg",
-    "./src/assets/achi5..jpeg",
-    "./src/assets/achi6.jpeg",
+    
+    achi1,
+    achi2,
+    achi3,
+    achi4,
+    achi5,
+    achi6,
   ];
 
   return (

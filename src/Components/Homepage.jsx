@@ -216,12 +216,13 @@ In addition to development services, Evolve Solution provides industry-focused t
 
       {/* ================= HERO ================= */}
  <section className="min-h-screen pt-20 flex flex-col justify-center items-center text-center px-4 sm:px-6">
-  
+
+  {/* Hero Heading */}
   <motion.h1
     className="
       font-extrabold 
-      text-3xl sm:text-4xl md:text-6xl 
-      leading-tight
+      text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+      leading-snug sm:leading-tight md:leading-tight
     "
     initial={{ opacity: 0, y: -60 }}
     animate={{ opacity: 1, y: 0 }}
@@ -233,13 +234,15 @@ In addition to development services, Evolve Solution provides industry-focused t
     </span>
   </motion.h1>
 
+  {/* Hero Description */}
   <motion.p
     className="
       mt-4 sm:mt-6 
       max-w-3xl 
-      text-sm sm:text-base md:text-lg 
+      text-lg sm:text-lg md:text-xl 
       font-medium 
       whitespace-pre-line
+      px-2 sm:px-0
     "
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
@@ -249,6 +252,7 @@ In addition to development services, Evolve Solution provides industry-focused t
   </motion.p>
 
 </section>
+
 
 
   
@@ -275,14 +279,14 @@ In addition to development services, Evolve Solution provides industry-focused t
         Engineering-Driven <span className="text-white">Culture</span>
       </h2>
 
-      <p className="text-white text-sm sm:text-base leading-relaxed mb-4">
+      <p className="text-white text-lg sm:text-base leading-relaxed mb-4">
         At EvolveSolution, we foster a high-performance engineering culture built
         on clean architecture, reusable components, and Agile sprint execution.
         Our teams work with clarity, ownership, and accountability to deliver
         scalable digital solutions.
       </p>
 
-      <ul className="text-white text-sm sm:text-base space-y-2 list-disc list-inside">
+      <ul className="text-white text-lg sm:text-base space-y-2 list-disc list-inside">
         <li>Clean code standards and best practices</li>
         <li>Agile development and sprint-based delivery</li>
         <li>Code reviews and performance optimization</li>
@@ -303,13 +307,13 @@ In addition to development services, Evolve Solution provides industry-focused t
         Smart Collaboration & <span className="text-white">Growth</span>
       </h2>
 
-      <p className="text-white text-sm sm:text-base leading-relaxed mb-4">
+      <p className="text-white text-lg sm:text-base leading-relaxed mb-4">
         We believe that great products are built through strong collaboration.
         Our teams communicate openly across design, development, and deployment
         to solve real-world problems efficiently.
       </p>
 
-      <ul className="text-white text-sm sm:text-base space-y-2 list-disc list-inside">
+      <ul className="text-white text-lg sm:text-base space-y-2 list-disc list-inside">
         <li>Cross-functional team collaboration</li>
         <li>Continuous learning and mentoring culture</li>
         <li>Innovation-driven problem solving</li>
@@ -348,7 +352,7 @@ In addition to development services, Evolve Solution provides industry-focused t
       <h3 className="text-lg sm:text-xl font-bold mb-2">
         Web Development
       </h3>
-      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+      <p className="text-lg sm:text-base text-gray-700 leading-relaxed">
         We design and develop modern, responsive, and high-performance websites
         tailored to your business needs. Our websites are fast, secure, and
         user-friendly, ensuring a great experience across all devices.
@@ -361,7 +365,7 @@ In addition to development services, Evolve Solution provides industry-focused t
       <h3 className="text-lg sm:text-xl font-bold mb-2">
         Mobile Applications
       </h3>
-      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+      <p className="text-lg sm:text-base text-gray-700 leading-relaxed">
         We design and develop high-quality mobile applications that deliver
         smooth performance and an excellent user experience. Our apps are built
         to be secure, scalable, and easy to use, helping businesses connect with
@@ -375,7 +379,7 @@ In addition to development services, Evolve Solution provides industry-focused t
       <h3 className="text-lg sm:text-xl font-bold mb-2">
         Backend & Cloud
       </h3>
-      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+      <p className="text-lg sm:text-base text-gray-700 leading-relaxed">
         We provide robust backend and cloud solutions that power secure,
         scalable, and high-performance applications. Our backend systems handle
         business logic, databases, and APIs, while our cloud services ensure
@@ -414,20 +418,20 @@ In addition to development services, Evolve Solution provides industry-focused t
         Land & Digital <span className="text-fuchsia-600">Marketing</span>
       </h2>
 
-      <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+      <p className="text-gray-700 text-lg sm:text-base md:text-lg leading-relaxed mb-4">
         We provide end-to-end land and digital marketing solutions designed
         to increase visibility, generate qualified leads, and drive measurable
         business growth. Our strategies are data-driven, audience-focused,
         and performance-oriented.
       </p>
 
-      <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-5 sm:mb-6">
+      <p className="text-gray-700 text-lg sm:text-base md:text-lg leading-relaxed mb-5 sm:mb-6">
         From local land promotions to full-scale digital campaigns, we combine
         market research, creative execution, and analytics to ensure maximum
         ROI across every channel.
       </p>
 
-      <ul className="space-y-2 sm:space-y-3 text-gray-800 text-sm sm:text-base font-medium">
+      <ul className="space-y-2 sm:space-y-3 text-gray-800 text-lg sm:text-base font-medium">
         <li>✔ SEO & Local Search Optimization</li>
         <li>✔ Social Media Marketing & Paid Ads</li>
         <li>✔ Google Ads, Meta Ads & Campaign Tracking</li>

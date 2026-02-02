@@ -154,8 +154,18 @@ const Footer = () => {
             SIDCO Industrial Estate,
             <br />
             Ekkatuthangal,
-            <br />
-            Chennai, Tamil Nadu – 600006
+            <br/>
+              Chennai, Tamil Nadu – 600006
+          </p>
+          <p className="text-black font-bold text-sm leading-relaxed mb-4 max-w-xs">
+             Other  Branches
+          </p>
+          <p className="text-gray-600 text-sm leading-relaxed mb-4 max-w-xs"> 
+           Awfis guindy, Chennai .
+           <br/>
+           Pammal Chennai.
+           <br/>
+           Bangalore
           </p>
 
           <div className="w-full max-w-xs h-36 rounded-xl overflow-hidden border border-gray-300 shadow-sm">

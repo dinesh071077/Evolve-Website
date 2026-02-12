@@ -117,6 +117,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/Evolvelogo.png";
+import { path } from "framer-motion/client";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -126,6 +127,7 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
+    {name:"Properties", path:"/properties"}
   ];
 
   return (

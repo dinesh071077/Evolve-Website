@@ -8,6 +8,7 @@ import Contact from "./Components/Contact";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
+import Properties from "./Components/Properties";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+         <Route path="/properties"  element={<Properties />} />
       </Routes>
 
       <Footer />

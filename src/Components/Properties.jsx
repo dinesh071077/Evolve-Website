@@ -200,14 +200,12 @@
 //     </div>
 //   );
 // }
-
-
 import React, { useState, useEffect } from "react";
 
 /* ---------------- IMAGE IMPORTS ---------------- */
 
+import heroPoster from "../assets/home-banner2.jpg";
 
-import heroPoster from "../assets/home-banner2.jpg" 
 import dra from "../assets/dra.jpeg";
 import dra2 from "../assets/dra2.jpeg";
 import dra3 from "../assets/dra3.jpeg";
@@ -312,7 +310,7 @@ function ImageSlider({ images }) {
   }, [images]);
 
   return (
-    <div className="relative w-full h-[380px] overflow-hidden rounded-t-3xl">
+    <div className="relative w-full h-[220px] sm:h-[280px] md:h-[340px] lg:h-[380px] overflow-hidden rounded-t-3xl">
       <img
         src={images[index]}
         className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
@@ -322,14 +320,14 @@ function ImageSlider({ images }) {
         onClick={() =>
           setIndex(index === 0 ? images.length - 1 : index - 1)
         }
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 px-3 py-1 rounded-full shadow"
+        className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 px-2 sm:px-3 py-1 rounded-full shadow"
       >
         ‹
       </button>
 
       <button
         onClick={() => setIndex((index + 1) % images.length)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 px-3 py-1 rounded-full shadow"
+        className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 px-2 sm:px-3 py-1 rounded-full shadow"
       >
         ›
       </button>
@@ -343,9 +341,9 @@ export default function Properties() {
   return (
     <div className="bg-fuchsia-600 min-h-screen">
 
-      {/* HERO POSTER */}
+      {/* HERO */}
       <div
-        className="relative h-[85vh] flex items-center justify-center text-center"
+        className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] flex items-center justify-center text-center"
         style={{
           backgroundImage: `url(${heroPoster})`,
           backgroundSize: "cover",
@@ -354,19 +352,19 @@ export default function Properties() {
       >
         <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="relative z-10 text-white px-6 max-w-3xl">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 animate-pulse">
+        <div className="relative z-10 text-white px-4 sm:px-6 max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-3 sm:mb-4">
             Evolve Properties
           </h1>
 
-          <p className="text-xl mb-8">
+          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8">
             Discover premium homes crafted for modern living
           </p>
 
           <a
             href="https://wa.me/919319552561"
             target="_blank"
-            className="bg-green-500 hover:bg-green-600 px-10 py-3 rounded-full font-semibold transition"
+            className="bg-green-500 hover:bg-green-600 px-6 sm:px-10 py-3 rounded-full font-semibold transition inline-block"
           >
             Enquire on WhatsApp
           </a>
@@ -374,7 +372,7 @@ export default function Properties() {
       </div>
 
       {/* PROPERTIES */}
-      <div className="max-w-5xl mx-auto py-24 px-6 space-y-20">
+      <div className="max-w-5xl mx-auto py-16 sm:py-24 px-4 sm:px-6 space-y-16 sm:space-y-20">
 
         {properties.map((property, i) => (
           <div
@@ -383,16 +381,16 @@ export default function Properties() {
           >
             <ImageSlider images={property.images} />
 
-            <div className="p-10 space-y-4">
-              <h2 className="text-3xl font-bold">
+            <div className="p-6 sm:p-10 space-y-3 sm:space-y-4">
+              <h2 className="text-2xl sm:text-3xl font-bold">
                 {property.name}
               </h2>
 
-              <p className="text-blue-600 text-lg font-semibold">
+              <p className="text-blue-600 font-semibold text-base sm:text-lg">
                 {property.location}
               </p>
 
-              <ul className="space-y-1 text-gray-700 text-lg">
+              <ul className="space-y-1 text-gray-700 text-base sm:text-lg">
                 {property.description.map((p, idx) => (
                   <li key={idx}>• {p}</li>
                 ))}
@@ -401,7 +399,7 @@ export default function Properties() {
               <a
                 href={`https://wa.me/919319552561?text=I am interested in ${property.name}`}
                 target="_blank"
-                className="inline-block mt-8 bg-green-500 hover:bg-green-600 text-white px-10 py-3 rounded-full font-semibold transition"
+                className="inline-block mt-6 sm:mt-8 bg-green-500 hover:bg-green-600 text-white px-6 sm:px-10 py-3 rounded-full font-semibold transition"
               >
                 Enquire on WhatsApp
               </a>
@@ -412,15 +410,15 @@ export default function Properties() {
       </div>
 
       {/* AMENITIES */}
-      <h2 className="text-3xl font-bold text-center mb-12">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-white">
         Amenities
       </h2>
 
-      <div className="max-w-4xl mx-auto grid md:grid-cols-3 sm:grid-cols-2 gap-6 pb-24 px-6">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 pb-16 sm:pb-24 px-4 sm:px-6">
         {amenities.map((item, i) => (
           <div
             key={i}
-            className="bg-white p-6 rounded-xl shadow-lg text-center font-medium hover:shadow-xl transition"
+            className="bg-white p-5 sm:p-6 rounded-xl shadow-lg text-center font-medium hover:shadow-xl transition"
           >
             {item}
           </div>

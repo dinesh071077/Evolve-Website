@@ -142,7 +142,10 @@ import {
   FaHeadset
 } from "react-icons/fa";
 import RoadMap from "./RoadMap";
-
+import img1 from "../assets/download.jpeg"
+import img2 from "../assets/1715371733808.jpeg"
+import img3 from "../assets/circle.png"
+import img4 from "../assets/undraw_investment-data_frxx.png"
 const techIcons = [FaReact, FaNodeJs, FaPython, FaDatabase];
 
 const Homepage = () => {
@@ -373,7 +376,7 @@ In addition to development services, Evolve Solution provides industry-focused t
     <div className="relative group h-72 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-3 hover:scale-[1.03]">
 
       <img
-        src="/src/assets/download.jpeg"
+        src={img1}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
 
@@ -400,7 +403,7 @@ In addition to development services, Evolve Solution provides industry-focused t
     <div className="relative group h-72 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-3 hover:scale-[1.03]">
 
       <img
-        src="src/assets/1715371733808.jpeg"
+        src={img2}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
 
@@ -428,7 +431,7 @@ In addition to development services, Evolve Solution provides industry-focused t
     <div className="relative group h-72 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-3 hover:scale-[1.03]">
 
       <img
-        src="/src/assets/circle.png"
+        src={img3}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
 
@@ -454,7 +457,7 @@ In addition to development services, Evolve Solution provides industry-focused t
      <div className="relative group h-72 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-3 hover:scale-[1.03]">
 
   <img
-    src="/src/assets/undraw_investment-data_frxx.png"
+    src={img4}
     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
   />
 

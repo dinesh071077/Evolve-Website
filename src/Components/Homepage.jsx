@@ -125,12 +125,12 @@
   
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
+import heroVideo from "../assets/299527_medium.mp4";
 import TypingText from "../Components/TypingAnimation";
 import Navbar from "./Navbar";
 import pic1 from "../assets/modern-office.avif"
 import pic2 from "../assets/collaboration-group-young-modern-people-smart-casual-wear-discussing-something-smiling-working-creative-office-144907464.webp"
-import pic3 from "../assets/digi.jpeg"
+import pic3 from "../assets/digital-marketing-2.jpg.optimal.jpg"
 import {
   FaReact,
   FaNodeJs,
@@ -139,7 +139,9 @@ import {
   FaBullhorn,
   FaLaptopCode,
   FaMobileAlt,
+  FaHeadset
 } from "react-icons/fa";
+import RoadMap from "./RoadMap";
 
 const techIcons = [FaReact, FaNodeJs, FaPython, FaDatabase];
 
@@ -215,50 +217,71 @@ In addition to development services, Evolve Solution provides industry-focused t
       })}
 
       {/* ================= HERO ================= */}
- <section className="min-h-screen pt-20 flex flex-col justify-center items-center text-center px-4 sm:px-6">
+ {/* ================= HERO ================= */}
+<section className="relative min-h-screen pt-20 flex flex-col justify-center items-center text-center px-4 sm:px-6 overflow-hidden">
 
-  {/* Hero Heading */}
-  <motion.h1
-    className="
-      font-extrabold 
-      text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-      leading-snug sm:leading-tight md:leading-tight
-    "
-    initial={{ opacity: 0, y: -60 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1.2 }}
+  {/* Background Video */}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
   >
-    Welcome to{" "}
-    <span className="text-fuchsia-600 block sm:inline">
-      EvolveSolution
-    </span>
-  </motion.h1>
+    <source src={heroVideo} type="video/mp4" />
+  </video>
 
-  {/* Hero Description */}
-  <motion.p
-    className="
-      mt-4 sm:mt-6 
-      max-w-3xl 
-      text-lg sm:text-lg md:text-xl 
-      font-medium 
-      whitespace-pre-line
-      px-2 sm:px-0
-    "
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 0.8 }}
-  >
-    <TypingText text={descriptionText} speed={20} />
-  </motion.p>
+  {/* Dark Overlay */}
+  <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-0"></div>
+
+  {/* Content */}
+  <div className="relative z-10">
+
+    {/* Hero Heading */}
+    <motion.h1
+      className="
+        font-extrabold 
+        text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+        leading-snug sm:leading-tight md:leading-tight
+        text-white
+      "
+      initial={{ opacity: 0, y: -60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2 }}
+    >
+      Welcome to{" "}
+      <span className="text-fuchsia-500 block sm:inline">
+        EvolveSolution
+      </span>
+    </motion.h1>
+
+    {/* Hero Description */}
+    <motion.p
+      className="
+        mt-4 sm:mt-6 
+        max-w-3xl 
+        text-lg sm:text-lg md:text-xl 
+        font-medium 
+        whitespace-pre-line
+        px-2 sm:px-0
+        text-gray-200
+      "
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.8 }}
+    >
+      <TypingText text={descriptionText} speed={20} />
+    </motion.p>
+
+  </div>
 
 </section>
-
 
 
   
 
 {/* ================= WORK CULTURE ================= */}
-<section className="bg-fuchsia-600 py-10 sm:py-12 px-4 sm:px-6">
+<section className="bg-gray-900 py-10 sm:py-12 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
 
     {/* Image */}
@@ -275,7 +298,7 @@ In addition to development services, Evolve Solution provides industry-focused t
 
     {/* Content */}
     <div className="text-center md:text-left">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white"  >
         Engineering-Driven <span className="text-white">Culture</span>
       </h2>
 
@@ -298,12 +321,12 @@ In addition to development services, Evolve Solution provides industry-focused t
 </section>
 
 {/* ================= COLLABORATION ================= */}
-<section className="bg-fuchsia-600 py-12 sm:py-14 px-4 sm:px-6">
+<section className="bg-gray-900 py-12 sm:py-14 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
 
     {/* Content */}
     <div className="text-center md:text-left order-2 md:order-1">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white"  >
         Smart Collaboration & <span className="text-white">Growth</span>
       </h2>
 
@@ -337,101 +360,180 @@ In addition to development services, Evolve Solution provides industry-focused t
 </section>
 
 
-      {/* ================= SERVICES ================= */}
-   <section className="bg-gray-100 py-12 sm:py-16 px-4 sm:px-6 text-center">
-  
+   {/* ================= SERVICES ================= */}
+<section className="bg-gray-100 py-12 sm:py-16 px-4 sm:px-6 text-center">
+
   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12">
     Our <span className="text-fuchsia-600">Core Services</span>
   </h2>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-    
+
     {/* Web Development */}
-    <div className="p-5 sm:p-6 rounded-2xl shadow-md bg-white hover:shadow-xl transition-shadow duration-300">
-      <FaLaptopCode className="text-3xl sm:text-4xl text-fuchsia-600 mx-auto mb-3 sm:mb-4" />
-      <h3 className="text-lg sm:text-xl font-bold mb-2">
-        Web Development
-      </h3>
-      <p className="text-lg sm:text-base text-gray-700 leading-relaxed">
-        We design and develop modern, responsive, and high-performance websites
-        tailored to your business needs. Our websites are fast, secure, and
-        user-friendly, ensuring a great experience across all devices.
-      </p>
+    <div className="relative group h-72 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-3 hover:scale-[1.03]">
+
+      <img
+        src="/src/assets/download.jpeg"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+
+      <div className="absolute inset-0 bg-black/60"></div>
+
+      <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col justify-center transition-opacity duration-300 group-hover:opacity-0">
+        <FaLaptopCode className="text-3xl sm:text-4xl text-fuchsia-400 mx-auto mb-3 sm:mb-4" />
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+          Web Development
+        </h3>
+      </div>
+
+      <div className="absolute inset-0 z-10 p-5 sm:p-6 flex items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+        <p className="text-lg sm:text-base leading-relaxed">
+          We design and develop modern, responsive, and high-performance websites
+          tailored to your business needs. Our websites are fast, secure, and
+          user-friendly, ensuring a great experience across all devices.
+        </p>
+      </div>
+
     </div>
 
     {/* Mobile Applications */}
-    <div className="p-5 sm:p-6 rounded-2xl shadow-md bg-white hover:shadow-xl transition-shadow duration-300">
-      <FaMobileAlt className="text-3xl sm:text-4xl text-fuchsia-600 mx-auto mb-3 sm:mb-4" />
-      <h3 className="text-lg sm:text-xl font-bold mb-2">
-        Mobile Applications
-      </h3>
-      <p className="text-lg sm:text-base text-gray-700 leading-relaxed">
-        We design and develop high-quality mobile applications that deliver
-        smooth performance and an excellent user experience. Our apps are built
-        to be secure, scalable, and easy to use, helping businesses connect with
-        customers anytime, anywhere.
-      </p>
+    <div className="relative group h-72 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-3 hover:scale-[1.03]">
+
+      <img
+        src="src/assets/1715371733808.jpeg"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+
+      <div className="absolute inset-0 bg-black/60"></div>
+
+      <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col justify-center transition-opacity duration-300 group-hover:opacity-0">
+        <FaMobileAlt className="text-3xl sm:text-4xl text-fuchsia-400 mx-auto mb-3 sm:mb-4" />
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+          Mobile Applications
+        </h3>
+      </div>
+
+      <div className="absolute inset-0 z-10 p-5 sm:p-6 flex items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+        <p className="text-lg sm:text-base leading-relaxed">
+          We design and develop high-quality mobile applications that deliver
+          smooth performance and an excellent user experience. Our apps are built
+          to be secure, scalable, and easy to use, helping businesses connect with
+          customers anytime, anywhere.
+        </p>
+      </div>
+
     </div>
 
     {/* Backend & Cloud */}
-    <div className="p-5 sm:p-6 rounded-2xl shadow-md bg-white hover:shadow-xl transition-shadow duration-300">
-      <FaDatabase className="text-3xl sm:text-4xl text-fuchsia-600 mx-auto mb-3 sm:mb-4" />
-      <h3 className="text-lg sm:text-xl font-bold mb-2">
-        Backend & Cloud
-      </h3>
-      <p className="text-lg sm:text-base text-gray-700 leading-relaxed">
-        We provide robust backend and cloud solutions that power secure,
-        scalable, and high-performance applications. Our backend systems handle
-        business logic, databases, and APIs, while our cloud services ensure
-        reliability, flexibility, and easy scalability.
-      </p>
+    <div className="relative group h-72 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-3 hover:scale-[1.03]">
+
+      <img
+        src="/src/assets/circle.png"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+
+      <div className="absolute inset-0 bg-black/60"></div>
+
+      <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col justify-center transition-opacity duration-300 group-hover:opacity-0">
+        <FaDatabase className="text-3xl sm:text-4xl text-fuchsia-400 mx-auto mb-3 sm:mb-4" />
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+          Backend & Cloud
+        </h3>
+      </div>
+
+      <div className="absolute inset-0 z-10 p-5 sm:p-6 flex items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+        <p className="text-lg sm:text-base leading-relaxed">
+          We provide robust backend and cloud solutions that power secure,
+          scalable, and high-performance applications. Our backend systems handle
+          business logic, databases, and APIs, while our cloud services ensure
+          reliability, flexibility, and easy scalability.
+        </p>
+      </div>
+
     </div>
+     <div className="relative group h-72 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-3 hover:scale-[1.03]">
+
+  <img
+    src="/src/assets/undraw_investment-data_frxx.png"
+    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+  />
+
+  <div className="absolute inset-0 bg-black/60"></div>
+
+  <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col justify-center transition-opacity duration-300 group-hover:opacity-0">
+    <FaHeadset className="text-3xl sm:text-4xl text-fuchsia-400 mx-auto mb-3 sm:mb-4" />
+    <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+      IT Support Services
+    </h3>
+  </div>
+
+  <div className="absolute inset-0 z-10 p-5 sm:p-6 flex items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+    <p className="text-lg sm:text-base leading-relaxed">
+      We provide reliable IT support services to ensure your systems run smoothly
+      and securely. Our team handles troubleshooting, maintenance, system updates,
+      and technical assistance to minimize downtime and keep your business operating efficiently.
+    </p>
+  </div>
+
+</div>
 
   </div>
 </section>
 
+
       {/* ================= DIGITAL MARKETING ================= */}
-    {/* ================= DIGITAL MARKETING ================= */}
-<section className="bg-gray-100 py-10 sm:py-14 md:py-16 px-4 sm:px-6">
+ 
+
+{/* ================= DIGITAL MARKETING ================= */}
+<section className="bg-gray-900 py-10 sm:py-14 md:py-16 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
 
-    {/* Image */}
+    {/* IMAGE WITH JUMP EFFECT */}
     <motion.img
       src={pic3}
       alt="Digital Marketing Strategy"
-      className="w-full rounded-2xl shadow-xl"
-      initial={{ opacity: 0, x: -50 }}
+      className="w-full rounded-2xl shadow-xl cursor-pointer"
+      initial={{ opacity: 0, x: -60 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      whileHover={{
+        y: -18,
+        scale: 1.03,
+        boxShadow: "0px 20px 40px rgba(0,0,0,0.25)",
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 180,
+        damping: 12,
+        duration: 0.8,
+      }}
       viewport={{ once: true }}
     />
 
-    {/* Content */}
+    {/* CONTENT */}
     <motion.div
       className="text-center md:text-left"
-      initial={{ opacity: 0, x: 50 }}
+      initial={{ opacity: 0, x: 60 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-        Land & Digital <span className="text-fuchsia-600">Marketing</span>
+      <h2 className=" text-white   text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+        Land & Digital <span className="text-white">Marketing</span>
       </h2>
 
-      <p className="text-gray-700 text-lg sm:text-base md:text-lg leading-relaxed mb-4">
+      <p className="text-white text-base sm:text-lg leading-relaxed mb-4">
         We provide end-to-end land and digital marketing solutions designed
         to increase visibility, generate qualified leads, and drive measurable
-        business growth. Our strategies are data-driven, audience-focused,
-        and performance-oriented.
+        business growth through smart digital strategies.
       </p>
 
-      <p className="text-gray-700 text-lg sm:text-base md:text-lg leading-relaxed mb-5 sm:mb-6">
+      <p className="text-white text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">
         From local land promotions to full-scale digital campaigns, we combine
         market research, creative execution, and analytics to ensure maximum
         ROI across every channel.
       </p>
 
-      <ul className="space-y-2 sm:space-y-3 text-gray-800 text-lg sm:text-base font-medium">
+      <ul className="space-y-2 sm:space-y-3 text-white text-base sm:text-lg font-medium">
         <li>✔ SEO & Local Search Optimization</li>
         <li>✔ Social Media Marketing & Paid Ads</li>
         <li>✔ Google Ads, Meta Ads & Campaign Tracking</li>
@@ -442,7 +544,7 @@ In addition to development services, Evolve Solution provides industry-focused t
 
   </div>
 </section>
-
+  <RoadMap/>
 
     </div>
   );

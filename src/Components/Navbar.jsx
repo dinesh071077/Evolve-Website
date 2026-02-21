@@ -136,6 +136,7 @@ const Navbar = () => {
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
     { name: "Properties", path: "/properties" },
+    { name: "Career", path: "/career" },
   ];
 
   useEffect(() => {

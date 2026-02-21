@@ -131,6 +131,8 @@ import Navbar from "./Navbar";
 import pic1 from "../assets/modern-office.avif"
 import pic2 from "../assets/collaboration-group-young-modern-people-smart-casual-wear-discussing-something-smiling-working-creative-office-144907464.webp"
 import pic3 from "../assets/digital-marketing-2.jpg.optimal.jpg"
+import pic4 from "../assets/innovation.jpg"
+import pic5 from "../assets/realworld.jpg"
 import {
   FaReact,
   FaNodeJs,
@@ -362,6 +364,84 @@ In addition to development services, Evolve Solution provides industry-focused t
   </div>
 </section>
 
+
+<section className="bg-gray-900 py-10 sm:py-12 px-4 sm:px-6">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+
+    {/* Image */}
+    <motion.img
+      src={pic4}
+      alt="Engineering Culture"
+      className="w-full rounded-2xl shadow-2xl hover:shadow-fuchsia-300/40 transition-shadow duration-500"
+      initial={{ opacity: 0, x: -60, scale: 0.95 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      whileHover={{ scale: 1.04 }}
+    />
+
+    {/* Content */}
+    <div className="text-center md:text-left">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white"  >
+        Innovation &<span className="text-white">Continuous Learning</span>
+      </h2>
+
+      <p className="text-white text-lg sm:text-base leading-relaxed mb-4">
+      We foster a culture where innovation and learning never stop. Our team constantly explores
+       modern technologies, frameworks, and industry trends to stay ahead in the evolving digital 
+       landscape. Developers are encouraged to experiment, improve their skills, 
+      and work with cutting-edge tools such as AI, cloud platforms, and modern web technologies.
+      </p>
+
+      <ul className="text-white text-lg sm:text-base space-y-2 list-disc list-inside">
+        <li>Explore and experiment with modern technologies.</li>
+        <li>Stay ahead with AI, cloud, and web frameworks.</li>
+        <li>Continuous skill growth is part of our culture.</li>
+       
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<section className="bg-gray-900 py-12 sm:py-14 px-4 sm:px-6">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+
+    {/* Content */}
+    <div className="text-center md:text-left order-2 md:order-1">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white"  >
+       Ownership & <span className="text-white">Real-World Impact</span>
+      </h2>
+
+      <p className="text-white text-lg sm:text-base leading-relaxed mb-4">
+      At EvolveSolution, every team member takes ownership of their work and contributes directly to
+       meaningful, real-world products. From idea to deployment,
+       developers are involved in building scalable solutions that solve actual business challenges.
+      </p>
+
+      <ul className="text-white text-lg sm:text-base space-y-2 list-disc list-inside">
+        <li>Take responsibility from idea to deployment.</li>
+        <li>Work on products that solve real business problems.</li>
+        <li>Make meaningful contributions that drive results.</li>
+        
+      </ul>
+    </div>
+
+    {/* Image */}
+    <motion.img
+      src={pic5}
+      alt="Team Collaboration"
+      className="w-full rounded-2xl shadow-2xl hover:shadow-fuchsia-300/40 transition-shadow duration-500 order-1 md:order-2"
+      initial={{ opacity: 0, x: 60, scale: 0.95 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      whileHover={{ scale: 1.04 }}
+    />
+
+  </div>
+</section>
 
    {/* ================= SERVICES ================= */}
 <section className="bg-gray-100 py-12 sm:py-16 px-4 sm:px-6 text-center">

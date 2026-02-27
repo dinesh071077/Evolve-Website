@@ -255,7 +255,7 @@ In addition to development services, Evolve Solution provides industry-focused t
       transition={{ duration: 1.2 }}
     >
       Welcome to{" "}
-      <span className="text-fuchsia-500 block sm:inline">
+      <span className="text-cyan-400 block sm:inline">
         EvolveSolution
       </span>
     </motion.h1>
@@ -447,7 +447,7 @@ In addition to development services, Evolve Solution provides industry-focused t
 <section className="bg-gray-100 py-12 sm:py-16 px-4 sm:px-6 text-center">
 
   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12">
-    Our <span className="text-fuchsia-600">Core Services</span>
+    Our <span className="text-cyan-400">Core Services</span>
   </h2>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
@@ -463,7 +463,7 @@ In addition to development services, Evolve Solution provides industry-focused t
       <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col justify-center transition-opacity duration-300 group-hover:opacity-0">
-        <FaLaptopCode className="text-3xl sm:text-4xl text-fuchsia-400 mx-auto mb-3 sm:mb-4" />
+        <FaLaptopCode className="text-3xl sm:text-4xl text-cyan-400 mx-auto mb-3 sm:mb-4" />
         <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
           Web Development
         </h3>
@@ -490,7 +490,7 @@ In addition to development services, Evolve Solution provides industry-focused t
       <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col justify-center transition-opacity duration-300 group-hover:opacity-0">
-        <FaMobileAlt className="text-3xl sm:text-4xl text-fuchsia-400 mx-auto mb-3 sm:mb-4" />
+        <FaMobileAlt className="text-3xl sm:text-4xl text-cyan-400 mx-auto mb-3 sm:mb-4" />
         <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
           Mobile Applications
         </h3>
@@ -518,7 +518,7 @@ In addition to development services, Evolve Solution provides industry-focused t
       <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col justify-center transition-opacity duration-300 group-hover:opacity-0">
-        <FaDatabase className="text-3xl sm:text-4xl text-fuchsia-400 mx-auto mb-3 sm:mb-4" />
+        <FaDatabase className="text-3xl sm:text-4xl text-cyan-400 mx-auto mb-3 sm:mb-4" />
         <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
           Backend & Cloud
         </h3>
@@ -544,7 +544,7 @@ In addition to development services, Evolve Solution provides industry-focused t
   <div className="absolute inset-0 bg-black/60"></div>
 
   <div className="relative z-10 p-5 sm:p-6 h-full flex flex-col justify-center transition-opacity duration-300 group-hover:opacity-0">
-    <FaHeadset className="text-3xl sm:text-4xl text-fuchsia-400 mx-auto mb-3 sm:mb-4" />
+    <FaHeadset className="text-3xl sm:text-4xl text-cyan-400 mx-auto mb-3 sm:mb-4" />
     <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
       IT Support Services
     </h3>

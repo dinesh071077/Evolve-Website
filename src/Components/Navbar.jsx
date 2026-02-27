@@ -149,7 +149,7 @@ const Navbar = () => {
     <>
       {/* ===== Navbar ===== */}
       <motion.nav
-        className={`fixed w-full z-50 bg-white shadow-lg transition-all duration-500 flex justify-center`}
+        className={` fixed w-full z-50 bg-white shadow-lg transition-all duration-500 flex justify-center`}
         animate={{
           padding: scrolled ? "0.5rem 2rem" : "1rem 2rem",
           borderRadius: scrolled ? "2rem" : "0rem",
@@ -167,39 +167,39 @@ const Navbar = () => {
             />
             {!scrolled && (
               <h1 className="text-3xl font-bold text-black">
-                Evolve<span className="text-fuchsia-500">Solution</span>
+                Evolve<span className="text-cyan-400">Solution</span>
               </h1>
             )}
           </div>
 
           {/* Desktop Links */}
-          <ul
-            className={`hidden md:flex space-x-6 font-bold transition-all duration-500 ${
-              scrolled ? "justify-center flex-1" : ""
-            }`}
-          >
-            {navLinks.map((link) => (
-              <motion.li
-                key={link.name}
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <NavLink
-                  to={link.path}
-                  end={link.path === "/"}
-                  className={({ isActive }) =>
-                    `transition-colors duration-300 hover:text-fuchsia-800 ${
-                      isActive
-                        ? "text-fuchsia-600 underline underline-offset-4"
-                        : "text-black"
-                    }`
-                  }
-                >
-                  {link.name}
-                </NavLink>
-              </motion.li>
-            ))}
-          </ul>
+<ul
+  className={`hidden md:flex space-x-6 font-bold transition-all duration-500 ${
+    scrolled ? "justify-center flex-1" : ""
+  }`}
+>
+  {navLinks.map((link) => (
+    <li key={link.name}>
+      <NavLink
+        to={link.path}
+        end={link.path === "/"}
+        className={({ isActive }) =>
+          `
+          relative px-3 py-1.5 rounded-md
+          transition-all duration-300
+          ${
+            isActive
+              ? "bg-cyan-500 text-white shadow-md"
+              : "text-black hover:bg-fuchsia-100"
+          }
+          `
+        }
+      >
+        {link.name}
+      </NavLink>
+    </li>
+  ))}
+</ul>
 
           {/* Hamburger */}
           <button
@@ -241,7 +241,7 @@ const Navbar = () => {
                   className="text-black text-2xl font-bold"
                   onClick={() => setIsOpen(false)}
                 >
-                  ✖
+                  
                 </button>
               </div>
 

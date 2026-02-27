@@ -280,10 +280,10 @@ const About = () => {
 
       {/* ================= HEADING ================= */}
       <motion.h1
-        className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center z-20"
+        className="text-4xl sm:text-5xl md:text-6xl  font-extrabold text-center z-20 p-3"
         initial={{ opacity: 0, y: -80 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+       
       >
         <motion.span
           className="text-cyan-400"

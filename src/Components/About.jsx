@@ -222,7 +222,7 @@ const About = () => {
       onClick={handleClick}
       className="
       min-h-screen
-      bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#312e81]
+      bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#312e81] 
       text-white
       flex flex-col
       justify-center

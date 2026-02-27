@@ -225,15 +225,23 @@ const Footer = () => {
             <br />
             NP 28, Sai Supreme,
             <br />
-            Thiru Vi Ka Industrial Estate,
-            <br />
             SIDCO Industrial Estate,
             <br />
             Ekkatuthangal,
             <br />
             Chennai, Tamil Nadu – 600006
           </p>
-
+          <p className="text-gray-400 text-sm leading-relaxed mb-4 max-w-xs">
+            <span className="font-semibold text-white"></span>
+            <br />
+            Workafella Coworking Space,
+            <br />
+            Infantry Road ,
+            <br />
+            Bangalore,
+            <br />
+            Karnataka -560001
+          </p>
           <p className="text-white font-bold text-sm leading-relaxed mb-2 max-w-xs">
             Other Branches
           </p>
@@ -242,23 +250,30 @@ const Footer = () => {
             Awfis Guindy, Chennai
             <br />
             Pammal Chennai
-            <br />
-            Bangalore
+           
+           
           </p>
 
         </div>
 
         {/* 🔹 Map + Social Links */}
         <div className="flex flex-col items-center lg:items-end gap-4">
-
+<div className="w-full max-w-xs h-36 rounded-xl overflow-hidden border border-cyan-400/30 shadow-sm">
+  <iframe
+    title="Sai Supreme Ekkatuthangal Location"
+    src="https://www.google.com/maps?q=Sai%20Supreme,%20Ekkatuthangal,%20Chennai&output=embed"
+    className="w-full h-full"
+    loading="lazy"
+  />
+</div>
           <div className="w-full max-w-xs h-36 rounded-xl overflow-hidden border border-cyan-400/30 shadow-sm">
-            <iframe
-              title="Evolve Solution Location"
-              src="https://www.google.com/maps?q=NP%2028,%20Thiru%20Vi%20Ka%20Industrial%20Estate,%20SIDCO%20Industrial%20Estate,%20Ekkatuthangal,%20Chennai&output=embed"
-              className="w-full h-full"
-              loading="lazy"
-            />
-          </div>
+  <iframe
+    title="Workafella Bangalore Location"
+    src="https://www.google.com/maps?q=Workafella%20Coworking%20Space,%20Infantry%20Road,%20Opposite%20Commissioner%20Office,%20Bangalore,%20Karnataka%20560001&output=embed"
+    className="w-full h-full"
+    loading="lazy"
+  />
+</div>
 
           {/* 🔹 Social Links */}
           <div className="flex gap-6 text-xl sm:text-2xl">

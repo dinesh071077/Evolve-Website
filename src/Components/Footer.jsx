@@ -215,12 +215,12 @@ const Footer = () => {
             evolvesolutionspvtltd@gmail.com
           </a>
 
-          <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-cyan-400">
+          {/* <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-cyan-400">
             <FaMapMarkerAlt />
             Our Location
-          </h3>
+          </h3> */}
 
-          <p className="text-gray-400 text-sm leading-relaxed mb-4 max-w-xs">
+          {/* <p className="text-gray-400 text-sm leading-relaxed mb-4 max-w-xs">
             <span className="font-semibold text-white">Evolve Solution</span>
             <br />
             NP 28, Sai Supreme,
@@ -230,8 +230,8 @@ const Footer = () => {
             Ekkatuthangal,
             <br />
             Chennai, Tamil Nadu – 600006
-          </p>
-          <p className="text-gray-400 text-sm leading-relaxed mb-4 max-w-xs">
+          </p> */}
+          {/* <p className="text-gray-400 text-sm leading-relaxed mb-4 max-w-xs">
             <span className="font-semibold text-white"></span>
             <br />
             Workafella Coworking Space,
@@ -252,28 +252,28 @@ const Footer = () => {
             Pammal Chennai
            
            
-          </p>
+          </p> */}
 
         </div>
 
         {/* 🔹 Map + Social Links */}
         <div className="flex flex-col items-center lg:items-end gap-4">
-<div className="w-full max-w-xs h-36 rounded-xl overflow-hidden border border-cyan-400/30 shadow-sm">
+{/* <div className="w-full max-w-xs h-36 rounded-xl overflow-hidden border border-cyan-400/30 shadow-sm">
   <iframe
     title="Sai Supreme Ekkatuthangal Location"
     src="https://www.google.com/maps?q=Sai%20Supreme,%20Ekkatuthangal,%20Chennai&output=embed"
     className="w-full h-full"
     loading="lazy"
   />
-</div>
-          <div className="w-full max-w-xs h-36 rounded-xl overflow-hidden border border-cyan-400/30 shadow-sm">
+</div> */}
+          {/* <div className="w-full max-w-xs h-36 rounded-xl overflow-hidden border border-cyan-400/30 shadow-sm">
   <iframe
     title="Workafella Bangalore Location"
     src="https://www.google.com/maps?q=Workafella%20Coworking%20Space,%20Infantry%20Road,%20Opposite%20Commissioner%20Office,%20Bangalore,%20Karnataka%20560001&output=embed"
     className="w-full h-full"
     loading="lazy"
   />
-</div>
+</div> */}
 
           {/* 🔹 Social Links */}
           <div className="flex gap-6 text-xl sm:text-2xl">

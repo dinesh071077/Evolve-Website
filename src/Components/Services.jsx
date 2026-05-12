@@ -271,12 +271,7 @@ import {
   FaDatabase,
 } from "react-icons/fa";
 
-import achi1 from "../assets/achi1.jpeg";
-import achi2 from "../assets/achi2.jpeg";
-import achi3 from "../assets/achi3.jpeg";
-import achi4 from "../assets/achi4.jpeg";
-import achi5 from "../assets/achi5..jpeg";
-import achi6 from "../assets/achi6.jpeg";
+
 
 import service1 from "../assets/imagesil.jpeg";
 import service2 from "../assets/circle.png";
@@ -351,7 +346,44 @@ const Services = () => {
     },
   ];
 
-  const achievementImages = [achi1, achi2, achi3, achi4, achi5, achi6];
+  const achievements = [
+    {
+      icon: "🏆",
+      stat: "500+",
+      title: "Students Trained",
+      desc: "Successfully trained over 500 students in cutting-edge technologies with hands-on, industry-relevant curriculum.",
+    },
+    {
+      icon: "💼",
+      stat: "300+",
+      title: "Placements Done",
+      desc: "Placed 300+ professionals in top-tier IT companies across India through our dedicated placement cell.",
+    },
+    {
+      icon: "🚀",
+      stat: "50+",
+      title: "Live Projects Delivered",
+      desc: "Successfully delivered over 50 live client projects, giving trainees real-world exposure and portfolio strength.",
+    },
+    {
+      icon: "🤝",
+      stat: "30+",
+      title: "Industry Partners",
+      desc: "Partnered with 30+ leading companies to ensure our students get the best internship and job opportunities.",
+    },
+    {
+      icon: "🎓",
+      stat: "10+",
+      title: "Expert Mentors",
+      desc: "Our team of 10+ industry veterans and certified trainers bring decades of combined experience to every batch.",
+    },
+    {
+      icon: "⭐",
+      stat: "98%",
+      title: "Satisfaction Rate",
+      desc: "98% of our students and corporate clients rate their experience as excellent or highly satisfactory.",
+    },
+  ];
 
   return (
     <div
@@ -400,7 +432,7 @@ const Services = () => {
       {clicks.map((click) => (
         <motion.div
           key={click.id}
-          className="absolute w-10 h-10 rounded-full bg-yellow-400"
+          className="absolute w-10 h-10 rounded-full bg-cyan-400 opacity-60"
           style={{
             top: click.y - 20,
             left: click.x - 20,
@@ -412,11 +444,11 @@ const Services = () => {
       ))}
 
       {/* SERVICES SECTION */}
-      <section className="min-h-screen px-6 py-20">
+      <section className="min-h-screen px-4 sm:px-6 pt-24 sm:pt-28 pb-16 sm:pb-20">
 
         {/* HEADING */}
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center mb-16"
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center mb-10 sm:mb-16 px-2"
           initial={{ opacity: 0, y: -80 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -441,7 +473,7 @@ const Services = () => {
         </motion.h1>
 
         {/* SERVICES GRID */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
 
           {serviceList.map((service, index) => (
 
@@ -506,46 +538,71 @@ const Services = () => {
       </section>
 
       {/* ACHIEVEMENTS */}
-      <section className="py-20 overflow-hidden">
+      <section className="py-12 sm:py-20 px-4 sm:px-6">
 
-        <h2 className="text-4xl font-bold text-center mb-12 text-cyan-400">
-          Our Achievements
-        </h2>
-
-        <motion.div
-          className="flex gap-8 w-max"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            repeat: Infinity,
-            duration: 20,
-            ease: "linear",
-          }}
+        <motion.h2
+          className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-center mb-4 text-cyan-400 px-2"
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
         >
-          {[...achievementImages, ...achievementImages].map((img, index) => (
+          Our Achievements
+        </motion.h2>
 
-            <div
+        <motion.p
+          className="text-center text-gray-300 text-lg max-w-2xl mx-auto mb-14"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          We take pride in our milestones — from shaping careers to delivering
+          real-world solutions. Here's what we've accomplished so far.
+        </motion.p>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {achievements.map((item, index) => (
+            <motion.div
               key={index}
               className="
-                w-[280px]
-                h-[320px]
-                rounded-xl
-                overflow-hidden
+                rounded-2xl
                 border border-white/20
                 bg-white/10
                 backdrop-blur-lg
+                p-8
+                flex flex-col items-center text-center
+                hover:border-cyan-400
+                hover:shadow-xl
+                hover:shadow-cyan-400/20
+                transition duration-300
+                group
               "
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
+              <div className="text-5xl mb-4">{item.icon}</div>
 
-              <img
-                src={img}
-                className="w-full h-full object-cover"
-              />
+              <motion.div
+                className="text-4xl font-extrabold text-cyan-400 mb-2"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
+              >
+                {item.stat}
+              </motion.div>
 
-            </div>
+              <h3 className="text-xl font-bold mb-3 text-white">
+                {item.title}
+              </h3>
 
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
           ))}
-
-        </motion.div>
+        </div>
 
       </section>
 

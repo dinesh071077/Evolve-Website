@@ -228,7 +228,7 @@ const About = () => {
       justify-center
       items-center
       px-4 sm:px-6 md:px-10
-      py-16 sm:py-20
+      pt-24 sm:pt-28 pb-12 sm:pb-20
       relative
       overflow-hidden
     "
@@ -267,7 +267,7 @@ const About = () => {
       {clicks.map((click) => (
         <motion.div
           key={click.id}
-          className="absolute w-10 h-10 rounded-full bg-yellow-400"
+          className="absolute w-10 h-10 rounded-full bg-cyan-400 opacity-60"
           style={{
             top: click.y - 20,
             left: click.x - 20,
@@ -280,7 +280,7 @@ const About = () => {
 
       {/* ================= HEADING ================= */}
       <motion.h1
-        className="text-4xl sm:text-5xl md:text-6xl  font-extrabold text-center z-20 p-3"
+        className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center z-20 px-3 pt-3"
         initial={{ opacity: 0, y: -80 }}
         animate={{ opacity: 1, y: 0 }}
        
@@ -336,65 +336,58 @@ const About = () => {
           Our mission is to transform ideas into powerful digital experiences.
         </p>
       </motion.div>
-
-      {/* ================= IMAGE SECTION ================= */}
-      <section className="w-full max-w-6xl mt-16 space-y-16 z-20">
+      <section className="w-full max-w-6xl mt-12 sm:mt-16 space-y-12 sm:space-y-16 z-20 px-0">
 
         {/* IMAGE 1 */}
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
 
           <motion.img
             src={aboutPic1}
             alt="Development Team"
             className="w-full rounded-2xl shadow-xl"
-            initial={{ opacity: 0, x: -80 }}
+            initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           />
 
           <motion.div
-            initial={{ opacity: 0, x: 80 }}
+            initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-cyan-400 mb-3 sm:mb-4">
               Expert Development Team
             </h3>
 
-            <p className="text-gray-300">
-              Our expert development team is the backbone of EvolveSolution, bringing together deep technical expertise, creativity, and a passion for innovation. We specialize in modern technologies such as React, Node.js, Python, and cloud-based architectures, enabling us to build high-performance, scalable, and secure applications tailored to business needs.
-
-              Our developers follow industry best practices including clean code principles, modular architecture, code reviews, and agile methodologies to ensure every product we deliver meets the highest standards of quality and reliability. From frontend user interfaces to backend systems and database management, our team ensures seamless integration and optimal performance across all layers of development.
-
-              We focus on creating solutions that are not only technically strong but also user-friendly, future-ready, and business-driven. Whether it’s a startup launching its first product or an enterprise scaling its digital infrastructure, our team is committed to delivering solutions that drive growth, efficiency, and long-term success.
-
-              At EvolveSolution, we don’t just write code — we build innovative digital experiences that empower businesses to evolve and lead in the modern technological world.
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+              Our expert development team specializes in React, Node.js, Python, and cloud architectures — building high-performance, scalable, and secure applications. We follow clean code principles, agile methodologies, and rigorous code reviews to deliver the highest quality at every layer.
+              <br /><br />
+              Whether it's a startup's first product or an enterprise's digital transformation, we deliver solutions that drive growth, efficiency, and long-term success.
             </p>
           </motion.div>
 
         </div>
 
         {/* IMAGE 2 */}
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
 
           <motion.div
             className="order-2 md:order-1"
-            initial={{ opacity: 0, x: -80 }}
+            initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-cyan-400 mb-3 sm:mb-4">
               Smart Digital Solutions
             </h3>
 
-            <p className="text-gray-300">
-                At EvolveSolution, we deliver enterprise-grade digital solutions that combine the power of Artificial Intelligence, cloud computing, and modern web technologies to help organizations transform, innovate, and lead in a rapidly evolving digital landscape. Our approach focuses on building intelligent, data-driven platforms that enhance operational efficiency, improve decision-making, and create meaningful user experiences.
-
-                We leverage advanced technologies such as AI/ML models, scalable cloud infrastructure, microservices architecture, and secure APIs to develop systems that are highly reliable, flexible, and future-ready. Our solutions are designed to seamlessly integrate with existing business ecosystems while ensuring maximum performance, security, and scalability.
-
-                From enterprise platforms and SaaS applications to custom digital ecosystems, we prioritize performance optimization, security compliance, and long-term scalability. Our team works closely with clients to understand their strategic goals and deliver tailored solutions that drive measurable business value and sustainable growth.
-
-                At EvolveSolution, we go beyond development — we create intelligent digital foundations that empower enterprises to innovate faster, operate smarter, and scale with confidence in the digital era.
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+              We deliver enterprise-grade digital solutions combining AI, cloud computing, and modern web technologies. Our platforms are intelligent, data-driven, and designed for operational efficiency and meaningful user experiences.
+              <br /><br />
+              From SaaS applications to custom digital ecosystems, we prioritize performance, security compliance, and long-term scalability — empowering enterprises to innovate faster and scale with confidence.
             </p>
           </motion.div>
 
@@ -402,8 +395,9 @@ const About = () => {
             src={aboutPic2}
             alt="Digital Solutions"
             className="w-full rounded-2xl shadow-xl order-1 md:order-2"
-            initial={{ opacity: 0, x: 80 }}
+            initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           />
 
@@ -411,33 +405,36 @@ const About = () => {
 
       </section>
 
+
+
       {/* ================= PROJECT ================= */}
       <motion.div
         className="
-        mt-16
+        mt-10 sm:mt-16
         w-full
         max-w-3xl
         bg-white/10
         backdrop-blur-lg
         border border-white/20
         rounded-2xl
-        p-6
+        p-4 sm:p-6
         z-20
       "
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
       >
-        <div className="flex justify-between items-center">
-          <h3 className="text-xl font-bold text-cyan-400">
+        <div className="flex flex-wrap justify-between items-center gap-2">
+          <h3 className="text-lg sm:text-xl font-bold text-cyan-400">
             Dating App Project
           </h3>
 
-          <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm">
+          <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs sm:text-sm">
             Ongoing
           </span>
         </div>
 
-        <p className="mt-3 text-gray-300">
+        <p className="mt-3 text-gray-300 text-sm sm:text-base">
           A modern dating and friendship platform with chat, audio/video
           calling, and smart user matching system.
         </p>

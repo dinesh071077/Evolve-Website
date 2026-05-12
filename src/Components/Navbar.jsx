@@ -157,16 +157,16 @@ const Navbar = () => {
       >
         <div className="max-w-6xl w-full flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <img
               src={logo}
               alt="Logo"
-              className={`w-12 h-12 rounded-full shadow-md transition-all duration-500 ${
-                scrolled ? "w-10 h-10" : "w-12 h-12"
+              className={`rounded-full shadow-md transition-all duration-500 ${
+                scrolled ? "w-8 h-8 sm:w-10 sm:h-10" : "w-10 h-10 sm:w-12 sm:h-12"
               }`}
             />
             {!scrolled && (
-              <h1 className="text-3xl font-bold text-black">
+              <h1 className="text-lg sm:text-2xl md:text-3xl font-bold text-black whitespace-nowrap">
                 Evolve<span className="text-cyan-400">Solution</span>
               </h1>
             )}
@@ -190,7 +190,7 @@ const Navbar = () => {
           ${
             isActive
               ? "bg-cyan-500 text-white shadow-md"
-              : "text-black hover:bg-fuchsia-100"
+              : "text-black hover:bg-cyan-50 hover:text-cyan-600"
           }
           `
         }
@@ -203,8 +203,9 @@ const Navbar = () => {
 
           {/* Hamburger */}
           <button
-            className="md:hidden text-black text-2xl font-bold"
+            className="md:hidden text-black text-2xl font-bold p-2 rounded-lg hover:bg-gray-100 transition"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle Menu"
           >
             {isOpen ? "✖" : "☰"}
           </button>
@@ -234,7 +235,7 @@ const Navbar = () => {
                 <div className="flex items-center space-x-2">
                   <img src={logo} alt="Logo" className="w-8 h-8 rounded-full" />
                   <h1 className="text-2xl font-bold text-black">
-                    Evolve<span className="text-fuchsia-500">Solution</span>
+                    Evolve<span className="text-cyan-400">Solution</span>
                   </h1>
                 </div>
                 <button
@@ -253,8 +254,10 @@ const Navbar = () => {
                       end={link.path === "/"}
                       onClick={() => setIsOpen(false)}
                       className={({ isActive }) =>
-                        `block transition duration-300 hover:text-fuchsia-800 ${
-                          isActive ? "text-fuchsia-600 underline" : "text-black"
+                        `block px-3 py-2 rounded-md transition duration-300 ${
+                          isActive 
+                            ? "bg-cyan-500 text-white shadow-sm" 
+                            : "text-black hover:bg-cyan-50 hover:text-cyan-600"
                         }`
                       }
                     >

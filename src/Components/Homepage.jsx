@@ -184,14 +184,14 @@ In addition to development services, Evolve Solution provides industry-focused t
   return (
     <div
       id="home"
-      className="w-full min-h-screen relative overflow-hidden bg-white text-black"
+      className="w-full min-h-screen relative overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#312e81] text-white"
       onClick={handleClick}
     >
       {/* Click Ripple */}
       {clicks.map((click) => (
         <motion.div
           key={click.id}
-          className="absolute w-10 h-10 rounded-full bg-fuchsia-800 opacity-80"
+          className="absolute w-10 h-10 rounded-full bg-cyan-400 opacity-60"
           style={{ top: click.y - 20, left: click.x - 20 }}
           initial={{ scale: 0, opacity: 1 }}
           animate={{ scale: 2, opacity: 0 }}
@@ -207,7 +207,7 @@ In addition to development services, Evolve Solution provides industry-focused t
         return (
           <motion.div
             key={i}
-            className="absolute text-fuchsia-600 text-3xl opacity-70 z-20"
+            className="absolute text-cyan-400 text-3xl opacity-40 z-20"
             style={{ left: `${Math.random() * 100}%`, top: "-15%" }}
             animate={{ y: ["0vh", "110vh"], rotate: [0, 360] }}
             transition={{
@@ -246,16 +246,19 @@ In addition to development services, Evolve Solution provides industry-focused t
     <motion.h1
       className="
         font-extrabold 
-        text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-        leading-snug sm:leading-tight md:leading-tight
+        text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+        leading-tight
         text-white
+        text-center
+        w-full
+        px-2
       "
       initial={{ opacity: 0, y: -60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2 }}
     >
       Welcome to{" "}
-      <span className="text-cyan-400 block sm:inline">
+      <span className="text-cyan-400 inline">
         EvolveSolution
       </span>
     </motion.h1>
@@ -286,7 +289,7 @@ In addition to development services, Evolve Solution provides industry-focused t
   
 
 {/* ================= WORK CULTURE ================= */}
-<section className="bg-gray-900 py-10 sm:py-12 px-4 sm:px-6">
+<section className="bg-white/5 backdrop-blur-sm border-t border-white/10 py-10 sm:py-12 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
 
     {/* Image */}
@@ -326,7 +329,7 @@ In addition to development services, Evolve Solution provides industry-focused t
 </section>
 
 {/* ================= COLLABORATION ================= */}
-<section className="bg-gray-900 py-12 sm:py-14 px-4 sm:px-6">
+<section className="bg-white/5 backdrop-blur-sm border-t border-white/10 py-12 sm:py-14 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
 
     {/* Content */}
@@ -365,7 +368,7 @@ In addition to development services, Evolve Solution provides industry-focused t
 </section>
 
 
-<section className="bg-gray-900 py-10 sm:py-12 px-4 sm:px-6">
+<section className="bg-white/5 backdrop-blur-sm border-t border-white/10 py-10 sm:py-12 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
 
     {/* Image */}
@@ -405,7 +408,7 @@ In addition to development services, Evolve Solution provides industry-focused t
 </section>
 
 
-<section className="bg-gray-900 py-12 sm:py-14 px-4 sm:px-6">
+<section className="bg-white/5 backdrop-blur-sm border-t border-white/10 py-12 sm:py-14 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
 
     {/* Content */}
@@ -444,7 +447,7 @@ In addition to development services, Evolve Solution provides industry-focused t
 </section>
 
    {/* ================= SERVICES ================= */}
-<section className="bg-gray-100 py-12 sm:py-16 px-4 sm:px-6 text-center">
+<section className="bg-white/5 backdrop-blur-sm border-t border-white/10 py-12 sm:py-16 px-4 sm:px-6 text-center">
 
   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12">
     Our <span className="text-cyan-400">Core Services</span>
@@ -568,7 +571,7 @@ In addition to development services, Evolve Solution provides industry-focused t
  
 
 {/* ================= DIGITAL MARKETING ================= */}
-<section className="bg-gray-900 py-10 sm:py-14 md:py-16 px-4 sm:px-6">
+<section className="bg-white/5 backdrop-blur-sm border-t border-white/10 py-10 sm:py-14 md:py-16 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
 
     {/* IMAGE WITH JUMP EFFECT */}

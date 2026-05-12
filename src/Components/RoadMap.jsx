@@ -64,7 +64,7 @@ const RoadMap = () => {
       {/* TITLE */}
       <motion.h2
         className="
-          text-3xl sm:text-4xl md:text-5xl
+          text-2xl sm:text-3xl md:text-4xl lg:text-5xl
           font-extrabold
           text-center
           mb-12 sm:mb-16

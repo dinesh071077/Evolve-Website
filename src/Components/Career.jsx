@@ -96,7 +96,7 @@ const Career = () => {
       flex flex-col
       items-center
       px-4 sm:px-6 md:px-10
-      py-16 sm:py-20
+      pt-24 sm:pt-28 pb-12 sm:pb-20
       relative
       overflow-hidden
     "
@@ -135,7 +135,7 @@ const Career = () => {
       {clicks.map((click) => (
         <motion.div
           key={click.id}
-          className="absolute w-10 h-10 rounded-full bg-yellow-400"
+          className="absolute w-10 h-10 rounded-full bg-cyan-400 opacity-60"
           style={{
             top: click.y - 20,
             left: click.x - 20,
@@ -148,7 +148,7 @@ const Career = () => {
 
       {/* HEADING */}
       <motion.h1
-        className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center z-20"
+        className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center z-20 px-2"
         initial={{ opacity: 0, y: -80 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -171,7 +171,7 @@ const Career = () => {
           Why Join EvolveSolution
         </h2>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {benefits.map((item, index) => {
             const Icon = item.icon;
 
@@ -212,7 +212,7 @@ const Career = () => {
           Open Positions
         </h2>
 
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
 
           {jobs.map((job, index) => (
             <motion.div
@@ -227,7 +227,7 @@ const Career = () => {
               whileHover={{ scale: 1.02 }}
             >
 
-              <div className="flex justify-between items-center flex-wrap gap-3">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                 <div>
                   <h3 className="text-xl font-bold text-cyan-400">
@@ -267,14 +267,15 @@ const Career = () => {
       {/* CTA */}
       <motion.div
         className="
-        mt-16
+        mt-12 sm:mt-16
         bg-white/10
         backdrop-blur-lg
         border border-white/20
-        p-8
+        p-6 sm:p-8
         rounded-xl
         text-center
         max-w-3xl
+        w-full
         z-20
       "
       >

@@ -297,8 +297,8 @@ const Contact = () => {
         flex flex-col
         justify-center
         items-center
-        px-4
-        py-20
+        px-4 sm:px-6
+        pt-24 sm:pt-28 pb-12 sm:pb-20
         relative
         overflow-hidden
       "
@@ -337,7 +337,7 @@ const Contact = () => {
       {clicks.map((click) => (
         <motion.div
           key={click.id}
-          className="absolute w-10 h-10 rounded-full bg-yellow-400"
+          className="absolute w-10 h-10 rounded-full bg-cyan-400 opacity-60"
           style={{
             top: click.y - 20,
             left: click.x - 20,
@@ -350,7 +350,7 @@ const Contact = () => {
 
       {/* HEADING */}
       <motion.h1
-        className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-center z-20"
+        className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 text-center z-20 px-2"
         initial={{ opacity: 0, y: -80 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -371,7 +371,7 @@ const Contact = () => {
         >
           Contact
         </motion.span>{" "}
-        Evolve
+        Us
       </motion.h1>
 
       {/* CONTACT FORM BOX */}
@@ -383,11 +383,12 @@ const Contact = () => {
           backdrop-blur-lg
           border border-white/20
           rounded-2xl
-          p-6 md:p-10
+          p-5 sm:p-6 md:p-10
           z-20
         "
         initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
       >
         <p className="text-center text-gray-300 mb-8">
           Let’s build something innovative together.

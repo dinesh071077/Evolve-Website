@@ -141,7 +141,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#0f172a] text-white border-t border-cyan-400/30 py-10 px-4 sm:px-6 mt-10">
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 items-start">
 
         {/* 🔹 Logo & Info */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4">

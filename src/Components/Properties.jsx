@@ -339,7 +339,7 @@ function ImageSlider({ images }) {
   }, [images]);
 
   return (
-    <div className="relative w-full h-240px md:h-[340px] overflow-hidden rounded-t-2xl">
+    <div className="relative w-full h-[200px] sm:h-[260px] md:h-[340px] overflow-hidden rounded-t-2xl">
       <img
         src={images[index]}
         className="w-full h-full object-cover transition duration-700 hover:scale-105"
@@ -380,7 +380,7 @@ export default function Properties() {
 
       {/* HERO */}
       <div
-        className="relative h-[70vh] flex items-center justify-center text-center"
+        className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] flex items-center justify-center text-center"
         style={{
           backgroundImage: `url(${heroPoster})`,
           backgroundSize: "cover",
@@ -389,13 +389,13 @@ export default function Properties() {
       >
         <div className="absolute inset-0 bg-black/30"></div>
 
-        <div className="relative z-10 px-6 max-w-3xl">
+        <div className="relative z-10 px-4 sm:px-6 max-w-3xl">
 
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-4 px-2">
             <span className="text-cyan-400">Evolve</span> Properties
           </h1>
 
-          <p className="text-lg md:text-xl mb-8 text-gray-300">
+          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-gray-300">
             Discover premium homes crafted for modern living
           </p>
 
@@ -406,10 +406,12 @@ export default function Properties() {
             bg-cyan-400
             hover:bg-cyan-300
             text-black
-            px-8 py-3
+            px-6 sm:px-8 py-2.5 sm:py-3
             rounded-full
             font-semibold
             transition
+            text-sm sm:text-base
+            inline-block
           "
           >
             Enquire on WhatsApp
@@ -419,7 +421,7 @@ export default function Properties() {
       </div>
 
       {/* PROPERTIES */}
-      <div className="max-w-5xl mx-auto py-20 px-6 space-y-16">
+      <div className="max-w-5xl mx-auto py-10 sm:py-16 md:py-20 px-4 sm:px-6 space-y-10 sm:space-y-16">
 
         {properties.map((property, i) => (
 
@@ -439,9 +441,9 @@ export default function Properties() {
 
             <ImageSlider images={property.images} />
 
-            <div className="p-8 space-y-4">
+            <div className="p-5 sm:p-8 space-y-3 sm:space-y-4">
 
-              <h2 className="text-2xl md:text-3xl font-bold text-cyan-400">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-cyan-400">
                 {property.name}
               </h2>
 
@@ -481,11 +483,11 @@ export default function Properties() {
       </div>
 
       {/* AMENITIES */}
-      <h2 className="text-3xl font-bold text-center mb-10 text-cyan-400">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 text-cyan-400 px-4">
         Amenities
       </h2>
 
-      <div className="max-w-4xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-6 pb-20 px-6">
+      <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 pb-12 sm:pb-20 px-4 sm:px-6">
 
         {amenities.map((item, i) => (
 
